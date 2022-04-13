@@ -10,7 +10,7 @@
     <h1>List of customer orders</h1>
     {% for order in order_list %}
         <div>
-            <h3> <a href="/orders/{{orders.index(order)}}"> {{ order.customer_name }}: {{ order.order_date }} - {{order.order_price}} </a> </h3>
+            <h3> {{ order.customer_name }}: {{ order.order_date }} - {{order.order_price}} </h3>
         </div>
     {% endfor %}
 </body>
