@@ -8,14 +8,10 @@
 </head>
 <body>
     <h1>List of customer orders</h1>
-    {{ counter = 0 }}
     {% for order in order_list %}
-
         <div>
-            <h3> <a href="orders/{{ counter }}"> {{ order.customer_name }}: {{ order.order_date }} - {{order.order_price}} </a> </h3>
+            <h3> <a href="/orders/{{orders.index(order)}}"> {{ order.customer_name }}: {{ order.order_date }} - {{order.order_price}} </a> </h3>
         </div>
-        
-        {{ counter += 1 }}
     {% endfor %}
 </body>
 </html>
